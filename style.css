@@ -1,0 +1,290 @@
+/* Reset global pentru margini și padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stiluri pentru body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('images/charlotte-noelle-98WPMlTl5xo-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #333333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Secțiunea de header */
+header {
+    position: fixed;  /* Headerul va rămâne la locul său când dai scroll */
+    top: 0; /* Asigură-te că headerul rămâne la partea de sus */
+    z-index: 10; /* Se asigură că headerul rămâne deasupra celorlalte elemente */
+    width: 100%; 
+    background-size: cover;
+    background-position: center;
+    color: rgb(255, 255, 255); /* Face textul vizibil */
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    top: 0;           /* Asigură că se află în partea de sus */
+    left: 0;          /* Asigură că se aliniază pe orizontală */
+    right: 0;         /* Asigură că se aliniază pe orizontală */
+    padding-top: 3rem; /* Pentru a evita suprapunerea cu conținutul */
+}
+
+/* Containerul din header pentru aliniere */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    flex-wrap: wrap; /* Permite alinierea corectă pe dispozitive mici */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+/* Secțiunea introductivă cu imagine de fundal */
+.intro {
+    background-image: url('images/charlotte-noelle-98WPMlTl5xo-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 4rem 2rem;
+    padding-top: 100px;
+    position: relative;
+    height: 90vh;  /* Setează înălțimea secțiunii la 90din înălțimea ferestrei */
+    overflow: hidden; /* Evită overflow-ul imaginii */
+}
+
+/* Efect de overlay pentru vizibilitate mai bună */
+.intro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); /* Fundal semi-transparent peste imagine */
+    z-index: 0; /* Imaginea este la fund, textul este deasupra */
+}
+
+/* Stilizare text pentru a apărea deasupra imaginii */
+.intro h2, .intro p {
+    margin: 0;  /* Elimină marginile */
+    padding: 0; /* Elimină padding-ul */
+    line-height: 1.5;
+    margin-top: 150px;
+}
+
+.intro h2 {
+    font-size: 2rem; /* Crește dimensiunea textului */
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 1.25rem; /* Crește dimensiunea textului */
+    margin-top: 5px;
+}
+
+/* Restul secțiunilor */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem 2rem;
+    background-color: #fbeded;
+    flex-wrap: wrap;
+}
+
+.feature {
+    flex-basis: 30%;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.feature h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Itinerar personalizat */
+#itinerar {
+    background-color: #f9f9f9;
+    padding: 3rem 2rem;
+}
+
+/* Formular */
+#itinerar form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#itinerar label, #itinerar select, #itinerar input, #itinerar button {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+/* Butoane */
+button {
+    background-color: #FFD700;
+    color: #000000;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #332d0a;
+    transform: scale(1.05);
+}
+
+/* Contact */
+#contact {
+    background-color: #f9f9f9;
+    padding: 3rem 2rem;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#contact button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: #FFD700;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #305876;
+    padding: 20px;
+    color: white;
+}
+
+footer p {
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Social Media */
+.social-media {
+    display: flex;
+    gap: 15px;
+}
+
+.social-media a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #FFD700;
+}
+
+/* Responsivitate */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        flex-basis: 80%;
+        margin: 15px 0;
+    }
+
+    button {
+        width: auto;
+        padding: 10px 20px;
+    }
+
+    .social-media {
+        justify-content: center;
+    }
+}
+/* Stiluri pentru Politica de Confidențialitate */
+#privacy-policy {
+    background-color: white;
+    color: #333;  /* Textul va rămâne vizibil pe fundalul alb */
+}
+
+/* Stiluri pentru Termeni și Condiții */
+#terms-of-service {
+    background-color: white;
+    color: #333;  /* Textul va rămâne vizibil pe fundalul alb */
+}
+
+/* Stiluri pentru Întrebări frecvente */
+#faq {
+    background-color: white;
+    color: #333;  /* Textul va rămâne vizibil pe fundalul alb */
+}
+
+
