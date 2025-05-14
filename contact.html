@@ -1,0 +1,65 @@
+<!-- Secțiune Formular de Contact -->
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact - Travel Genius</title>
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+
+<section id="contact" class="contact-form">
+    <h2>Contactează-ne</h2>
+    <p>Completează formularul de mai jos și te vom contacta în cel mai scurt timp posibil!</p>
+
+    <form id="contactForm" action="https://formspree.io/f/xnndlday" method="POST">
+        <div class="form-group">
+            <label for="nume">Nume</label>
+            <input type="text" id="nume" name="nume" required>
+        </div>
+        <div class="form-group">
+            <label for="nume">Prenume</label>
+            <input type="text" id="nume" name="prenume" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Adresă de email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="subiect">Cu ce te putem ajuta?</label>
+            <input type="text" id="subiect" name="ajutor">
+        </div>
+       <div class="form-group">
+            <label for="ocazie-speciala">Călătoria este pentru vreo ocazie specială?</label>
+            <select id="ocazie-speciala" name="ocazie-speciala">
+            <option value="">Alege o opțiune</option>
+            <option value="Luna de miere">💍Luna de miere</option>
+            <option value="Aniversare">🎂 Aniversare</option>
+            <option value="Vacanță de familie">👨‍👩‍👧‍👦 Vacanță de familie</option>
+            <option value="Altceva">🌍 Altceva</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="zboruri">Ai nevoie și de zboruri?</label>
+            <select id="zboruri" name="zboruri">
+            <option value="da">Da</option>
+            <option value="nu">Nu</option>
+        </select>
+        </div>
+        <div class="form-group">
+            <label for="mesaj">Mesaj</label>
+            <textarea id="mesaj" name="mesaj" rows="4" required></textarea>
+        </div>
+        <button type="submit">Trimite mesajul</button>
+    </form>
+    <div id="form-message" class="form-message"></div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Travel Genius. Toate drepturile rezervate.</p>
+</footer>
+
+</body>
+</html>
