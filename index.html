@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Genius</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Stiluri adiționale */
+        .menu-toggle {
+            display: none;
+            font-size: 2rem;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            width: 100%;
+        }
+
+        .logo {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+        }
+
+        .contact-link {
+            margin-left: auto;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 1rem;
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background-color: rgba(0, 0, 0, 0.85);
+                padding: 1rem;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+                text-align: center;
+            }
+
+            .contact-link {
+                position: absolute;
+                right: 2rem;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+
+            <!-- Logo centrat -->
+            <div class="logo">Travel Genius</div>
+
+            <!-- Meniu navigație -->
+            <nav>
+                <ul>
+                    <nav class="main-nav">
+                        <ul>
+                          <li class="has-mega-menu">
+                            <a href="ideivacanta.html">Idei de Vacanță</a>
+                          </li>
+                          <!-- alte elemente de meniu -->
+                        </ul>
+                      </nav>
+                      
+                    <li><a href="#itinerar">Itinerar Personalizat</a></li>
+                    <li><a href="#oferte">Oferte</a></li>
+                </ul>
+            </nav>
+
+            <!-- Link Contact în dreapta -->
+            <a href="#contact" class="contact-link">Contact</a>
+        </div>
+    </header>
+
+    <!-- Secțiune Intro -->
+    <section class="intro">
+        <h2>Bine ai venit la Planificare de Călătorii!</h2>
+        <p>Găsește-ți destinația ideală și planifică-ți vacanța perfectă.</p>
+    </section>
+    <h2 class="titlu-sectiune">Destinații recomandate</h2>
+    <section class="destinatii-grid">
+        <div class="grid-container">
+          <div class="card-clean">
+            <img src="images/Berlin.jpg" alt="Berlin">
+            <h3>Berlin</h3>
+          </div>
+      
+          <div class="card-clean">
+            <img src="images/Santorini2.jpg" alt="Santorini">
+            <h3>Santorini</h3>
+          </div>
+      
+          <div class="card-clean">
+            <img src="images/Venetia2.jpg" alt="Veneția">
+            <h3>Veneția</h3>
+          </div>
+      
+          <div class="card-clean">
+            <img src="images/Canada2.jpg" alt="Canada">
+            <h3>Canada</h3>
+          </div>
+      
+          <div class="card-clean">
+            <img src="images/Austria2.jpg" alt="Austria">
+            <h3>Austria</h3>
+          </div>
+      
+          <div class="card-clean">
+            <img src="images/Elvetia2.jpg" alt="Alpii Elvețieni">
+            <h3>Alpii Elvețieni</h3>
+          </div>
+        </div>
+      </section>
+      
+   <!-- Secțiune de Call-to-Action pentru itinerar și contact -->
+<section class="call-to-action">
+    <h2>Planifică-ți vacanța perfectă!</h2>
+    <p>Găsește inspirația pentru vacanța ta de vis! Creează-ți itinerariul personalizat <a href="itinerar.html">aici</a> sau, dacă ai nevoie de ajutor, <a href="contact.html">contactează-ne!</a></p>
+</section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Travel Genius. Toate drepturile rezervate.</p>
+            <ul>
+                <li><a href="/privacy-policy.html">Politica de Confidențialitate</a></li>
+                <li><a href="/terms-of-service.html">Termeni și Condiții</a></li>
+                <li><a href="/faq.html">Întrebări frecvente</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Scripturi -->
+    <script>
+        // Scroll efect pentru header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Scroll special pentru politica de confidențialitate
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            const body = document.body;
+            if (body.id === 'privacy-policy') {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
